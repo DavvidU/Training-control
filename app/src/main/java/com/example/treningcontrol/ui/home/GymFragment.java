@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.treningcontrol.databinding.FragmentHomeBinding;
+import com.example.treningcontrol.databinding.FragmentGymBinding;
 
-public class HomeFragment extends Fragment {
+public class GymFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentGymBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        GymViewModel gymViewModel =
+                new ViewModelProvider(this).get(GymViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentGymBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textGym;
+        gymViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

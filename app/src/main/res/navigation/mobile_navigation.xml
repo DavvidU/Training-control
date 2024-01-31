@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_gym">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.treningcontrol.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_gym"
+        android:name="com.example.treningcontrol.ui.home.GymFragment"
+        android:label="@string/title_gym"
+        tools:layout="@layout/fragment_gym" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +22,9 @@
         android:name="com.example.treningcontrol.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_pogoda"
+        android:name="com.example.treningcontrol.ui.pogoda.PogodaFragment"
+        android:label="@string/title_pogoda"
+        tools:layout="@layout/fragment_pogoda" />
 </navigation>

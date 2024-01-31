@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">TreningControl</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_gym">Trening</string>
+    <string name="title_dashboard">Zadania</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_pogoda">Pogoda</string>
+
 </resources>
