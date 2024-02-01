@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -14,11 +15,11 @@ public interface CwiczenieDAO {
     LiveData<List<Cwiczenie>> pobierzWszystkie();
 
     @Query("SELECT * FROM Cwiczenie WHERE partieCiala & :rzadanePartie = :rzadanePartie")
-    List<Cwiczenie> pobierzWgPartii(int rzadanePartie);
+    LiveData<List<Cwiczenie>> pobierzWgPartii(int rzadanePartie);
 
     @Delete
-    void usun(Cwiczenie cwiczenie);
+    void delete(Cwiczenie cwiczenie);
 
-    @Insert
-    void wstaw(Cwiczenie cwiczenie);
+    @Insert(onConflict= OnConflictStrategy.REPLACE)
+    void insert(Cwiczenie cwiczenie);
 }

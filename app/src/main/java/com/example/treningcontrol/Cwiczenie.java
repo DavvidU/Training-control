@@ -11,12 +11,17 @@ public class Cwiczenie {
     public String nazwa;
     public int partieCiala;
     /*
-    10^6 - klatka
-    10^5 - barki
-    10^4 - biceps
-    10^3 - triceps
-    10^2 - brzuch
-    10^1 - plecy
-    10^0 - nogi
+    64 - klatka
+    32 - barki
+    16 - biceps
+    8 - triceps
+    4 - brzuch
+    2 - plecy
+    1 - nogi
      */
+
+    public Cwiczenie(String nazwa, int partieCiala) {
+        this.nazwa = nazwa;
+        this.partieCiala = partieCiala;
+    }
 }

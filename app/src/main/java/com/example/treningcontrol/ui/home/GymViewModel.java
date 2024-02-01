@@ -1,6 +1,7 @@
 package com.example.treningcontrol.ui.home;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class GymViewModel extends AndroidViewModel {
     private final CwiczenieRepository cwiczenieRepository; // repozytorium zarzadzajace cwiczeniami
-    private final LiveData<List<Cwiczenie>> cwiczenia;
+    public final LiveData<List<Cwiczenie>> cwiczenia;
 
     private final MutableLiveData<String> mText;
 
@@ -37,7 +38,7 @@ public class GymViewModel extends AndroidViewModel {
 
     LiveData<List<Cwiczenie>> pobierzWszystkieCwiczenia() { return cwiczenia; }
 
-    List<Cwiczenie> pobierzCwiczeniaWgPartii(int rzadanePartie)
+    LiveData<List<Cwiczenie>> pobierzCwiczeniaWgPartii(int rzadanePartie)
     { return cwiczenieRepository.pobierzCwiczeniaWgPartii(rzadanePartie); }
 
     void usun(Cwiczenie cwiczenie) { cwiczenieRepository.usun(cwiczenie); }
