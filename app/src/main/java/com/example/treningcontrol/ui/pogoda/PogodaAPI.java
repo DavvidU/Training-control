@@ -8,5 +8,7 @@ import retrofit2.http.Query;
 
 public interface PogodaAPI {
     @GET("data/2.5/weather")
-    Call<PogodaWynik> getCurrentWeatherData(@Query("lat") double lat, @Query("lon") double lon, @Query("appid") String apiKey);
+    Call<PogodaWynik> getCurrentWeatherData(@Query("lat") double lat, @Query("lon") double lon, @Query("appid") String apiKey,
+                                            @Query("units") String units,
+                                            @Query("lang") String lang);
 }
