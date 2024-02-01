@@ -27,7 +27,6 @@ public class PogodaFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textPogoda;
-        pogodaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
