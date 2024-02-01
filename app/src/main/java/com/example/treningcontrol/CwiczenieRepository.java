@@ -12,20 +12,20 @@ public class CwiczenieRepository {
     private final CwiczenieDAO cwiczenieDAO;
     private final LiveData<List<Cwiczenie>> cwiczenia;
 
-    CwiczenieRepository(Application application)
+    public CwiczenieRepository(Application application)
     {
         CwiczenieDatabase database = CwiczenieDatabase.getDatabase(application);
         cwiczenieDAO = database.cwiczenieDAO();
         cwiczenia = cwiczenieDAO.pobierzWszystkie();
     }
 
-    LiveData<List<Cwiczenie>> pobierzWszystkieCwiczenia() { return cwiczenia; }
+    public LiveData<List<Cwiczenie>> pobierzWszystkieCwiczenia() { return cwiczenia; }
 
-    List<Cwiczenie> pobierzCwiczeniaWgPartii(int rzadanePartie) { return cwiczenieDAO.pobierzWgPartii(rzadanePartie); }
+    public List<Cwiczenie> pobierzCwiczeniaWgPartii(int rzadanePartie) { return cwiczenieDAO.pobierzWgPartii(rzadanePartie); }
 
-    void usun(Cwiczenie cwiczenie)
+    public void usun(Cwiczenie cwiczenie)
     { CwiczenieDatabase.databaseWriteExecutor.execute(() -> cwiczenieDAO.usun(cwiczenie)); }
 
-    void wstaw(Cwiczenie cwiczenie)
+    public void wstaw(Cwiczenie cwiczenie)
     { CwiczenieDatabase.databaseWriteExecutor.execute(() -> cwiczenieDAO.wstaw(cwiczenie)); }
 }
