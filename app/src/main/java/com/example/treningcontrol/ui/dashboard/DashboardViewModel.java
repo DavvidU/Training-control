@@ -4,16 +4,28 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DashboardViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<List<String>> tasks;
 
     public DashboardViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        tasks = new MutableLiveData<>(new ArrayList<>());
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<String>> getTasks() {
+        return tasks;
     }
+
+    public void addTask(String taskText) {
+        List<String> currentTasks = tasks.getValue();
+        if (currentTasks == null) {
+            currentTasks = new ArrayList<>();
+        }
+        currentTasks.add(taskText);
+        tasks.setValue(currentTasks);
+    }
+
 }

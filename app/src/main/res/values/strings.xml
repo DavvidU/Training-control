@@ -2,7 +2,10 @@
     <string name="app_name">TreningControl</string>
     <string name="title_gym">Trening</string>
     <string name="title_dashboard">Zadania</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Więcej</string>
     <string name="title_pogoda">Pogoda</string>
-
+    <string name="add">Dodaj</string>
+    <string name="add_task">Zadania</string>
+    <string name="task_done">Zakończ</string>
+    <string name="task_name">Nazwa zadania</string>
 </resources>
