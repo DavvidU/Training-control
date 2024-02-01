@@ -1,7 +1,7 @@
 
 l
-java:S1450"VRemove the "binding" field and declare it as a local variable in the relevant methods.(¶ÃÊ
+java:S1450"VRemove the "binding" field and declare it as a local variable in the relevant methods.(Â¶ÂÃƒÃŠ
 Q
-java:S1854";Remove this useless assignment to local variable "navView".(‹Å´Í
+java:S1854";Remove this useless assignment to local variable "navView".(â€¹Ã…Â´Ã
 B
-java:S1481",Remove this unused "navView" local variable.(‹Å´Í
+java:S1481",Remove this unused "navView" local variable.(â€¹Ã…Â´Ã
